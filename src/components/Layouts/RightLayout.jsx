@@ -1,12 +1,17 @@
 import React from "react";
+import { ChatsById } from "../../pages/ChatsById";
 
-function RightLayout({ section }) {
+function RightLayout({ section, selectedUser }) {
   return (
-    <div className="flex-1 h-full p-4 bg-gray-50 overflow-y-auto">
-      {section === "section1" && <div>Window Chat aktif</div>}
-      {section === "section2" && <div>Status detail aktif</div>}
-      {section === "section3" && <div>Saluran aktif</div>}
-      {section === "section4" && <div>Grup aktif</div>}
+    <div className="p-4 h-full bg-gray-700 text-white overflow-y-auto">
+      {section === "section1" && selectedUser ? (
+        <>
+          <h2 className="text-xl font-semibold mb-2">Chat dengan {selectedUser.name}</h2>
+          <ChatsById user={selectedUser} />
+        </>
+      ) : (
+        <p className="text-gray-500">Pilih pengguna untuk mulai chat</p>
+      )}
     </div>
   );
 }

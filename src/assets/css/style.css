@@ -1,0 +1,19 @@
+/* Untuk seluruh elemen dengan scrollbar */
+.scroll-custom::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+  background: #1e2939; /* warna track */
+  border-radius: 10px;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+  background: #6a7282; /* warna thumb (yang digerakkan) */
+  border-radius: 10px;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb:hover {
+  background: #6a7282; /* saat hover */
+}

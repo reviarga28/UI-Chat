@@ -2,7 +2,7 @@ import React from "react";
 
 export const ChatLayout = ({ children }) => {
   return (
-    <div className="w-2/6 h-full p-4 bg-white shadow overflow-y-auto">
+    <div className="h-full bg-gray-800 text-white">
       {children}
     </div>
   );
